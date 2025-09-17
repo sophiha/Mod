@@ -1,0 +1,13 @@
+[{
+  "modid": "easyforum",
+  "name": "EasyForum",
+  "description": "Envie denuncias de forma automatica no forum.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://easyforum.fun/",
+  "authorList": ["Sophia"],
+  "credits": "Tecnica de Coremod por ayleafs (projeto opponent-focus).",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}]
