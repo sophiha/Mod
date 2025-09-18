@@ -70,7 +70,7 @@ public final class ForumApiService {
       HttpURLConnection connection = (HttpURLConnection) url.openConnection();
       connection.setRequestMethod("POST");
       connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-      connection.setRequestProperty("User-Agent", "EasyForumMod/1.2");
+      connection.setRequestProperty("User-Agent", "EasyForumMod/2.0");
       connection.setConnectTimeout(300000);
       connection.setReadTimeout(600000);
       connection.setDoOutput(true);
