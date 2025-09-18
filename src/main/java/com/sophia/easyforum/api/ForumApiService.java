@@ -190,7 +190,7 @@ public final class ForumApiService {
       OUTDATED {
          @Override
          void handleResponse(ICommandSender sender, int statusCode) {
-            sender.addChatMessage(new ChatComponentText(EnumChatFormatting.YELLOW + "Sua versão do EasyForum está desatualizada. Atualize para a versão mais recente."));
+            sender.addChatMessage(new ChatComponentText(EnumChatFormatting.YELLOW + "Sua versão do EasyForum está desatualizada. Para continuar, baixe a versão mais recente no site."));
          }
       },
       PENDING {
