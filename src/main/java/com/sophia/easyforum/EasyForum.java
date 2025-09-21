@@ -12,7 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public final class EasyForum {
     public static final String MODID = "easyforum";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "2.0";
     public static final String NAME = "EasyForum";
 
     @Mod.EventHandler
