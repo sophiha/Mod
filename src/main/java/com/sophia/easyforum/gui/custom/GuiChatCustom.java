@@ -22,7 +22,7 @@ public final class GuiChatCustom extends GuiChat {
     private static int[] pixelValues;
 
     @Override
-    protected void keyTyped(char typedChar, int keyCode) throws IOException {
+    protected void keyTyped(char typedChar, int keyCode) {
         if (keyCode == 28) {
             handleEnterKey();
         }
