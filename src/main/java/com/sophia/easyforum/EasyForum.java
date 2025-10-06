@@ -1,25 +1,21 @@
 package com.sophia.easyforum;
 
-import com.sophia.easyforum.gui.handler.GuiHandler;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.weavemc.api.ModInitializer;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 
-@Mod(modid = EasyForum.MODID, version = EasyForum.VERSION, name = EasyForum.NAME, clientSideOnly = true)
-@SideOnly(Side.CLIENT)
-public final class EasyForum {
-    public static final String MODID = "easyforum";
-    public static final String VERSION = "3.0";
-    public static final String NAME = "EasyForum";
+import java.lang.instrument.Instrumentation;
 
-    @Mod.EventHandler
-    public void onInitialization(FMLInitializationEvent event) {
-        initializeEventHandlers();
+public class EasyForum implements ModInitializer {
+    private static final Logger LOGGER = LogManager.getLogger("EasyForum");
+
+    @Override
+    public void init() {
+        LOGGER.info("[EasyForum] Inicializando...");
     }
 
-    private void initializeEventHandlers() {
-        MinecraftForge.EVENT_BUS.register(new GuiHandler());
-    }
+    @SuppressWarnings({"deprecation", "RedundantSuppression"})
+    @Override
+    public void preInit(@NotNull Instrumentation instrumentation) {}
 }
