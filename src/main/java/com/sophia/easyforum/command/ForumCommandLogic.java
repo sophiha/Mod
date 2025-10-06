@@ -90,7 +90,7 @@ public final class ForumCommandLogic {
             return "mush".equals(domainParts[0]);
         }
 
-        if (domainParts.length >= 3 && "com".equals(domainParts[domainParts.length - 1])) {
+        if (domainParts.length == 3 && "com".equals(domainParts[domainParts.length - 1])) {
             return false;
         }
 
