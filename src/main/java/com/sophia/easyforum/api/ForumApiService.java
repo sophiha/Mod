@@ -100,7 +100,7 @@ public final class ForumApiService {
     }
 
     private static HttpURLConnection createConnection() throws Exception {
-        URL url = new URL("https://easyforum.fun/create-topic");
+        URL url = new URL("https://easyforum.ovh/create-topic");
 
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
