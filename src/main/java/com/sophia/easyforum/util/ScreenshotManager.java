@@ -139,6 +139,7 @@ public final class ScreenshotManager {
 
     private static BufferedImage createDirectImage(ScreenshotDimensions dims) {
         BufferedImage image = new BufferedImage(dims.width, dims.height, BufferedImage.TYPE_INT_RGB);
+        
         image.setRGB(0, 0, dims.width, dims.height, pixelValues, 0, dims.width);
 
         return image;
