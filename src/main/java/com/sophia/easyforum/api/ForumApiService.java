@@ -212,6 +212,12 @@ public final class ForumApiService {
                 sender.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "A conta de Minecraft que você está usando não está vinculada à sua chave no site."));
             }
         },
+        RESTRICTED {
+            @Override
+            void handleResponse(ICommandSender sender, int statusCode) {
+                sender.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Você está usando a conta compartilhada do EasyForum. Apenas a sua conta principal vinculada ao site do EasyForum pode criar denúncias."));
+            }
+        },
         EXPIRED {
             @Override
             void handleResponse(ICommandSender sender, int statusCode) {
@@ -275,6 +281,8 @@ public final class ForumApiService {
                     return INCOMPLETE;
                 case "mismatch":
                     return MISMATCH;
+                case "restricted":
+                    return RESTRICTED;
                 case "expired":
                     return EXPIRED;
                 case "notfound":
