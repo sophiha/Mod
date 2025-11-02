@@ -1,8 +1,10 @@
 {
   "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.8.5",
   "package": "com.sophia.easyforum.mixins",
   "mixins": [
     "EntityPlayerSPMixin",
     "MinecraftMixin"
   ]
 }
+
