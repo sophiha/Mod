@@ -220,6 +220,12 @@ public final class ForumApiService {
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Sua sessão no fórum expirou. Autentique-se novamente no site do EasyForum."));
          }
       },
+      INVALID {
+         @Override
+         void handleResponse(ICommandSender sender, int statusCode) {
+            sender.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Sua sessão no fórum não é válida. Autentique-se novamente no site do EasyForum."));
+         }
+      },
       NOT_FOUND {
          @Override
          void handleResponse(ICommandSender sender, int statusCode) {
@@ -242,6 +248,12 @@ public final class ForumApiService {
          @Override
          void handleResponse(ICommandSender sender, int statusCode) {
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Falha ao enviar a imagem da prova. Tente novamente."));
+         }
+      },
+      NO_RESPONSE {
+         @Override
+         void handleResponse(ICommandSender sender, int statusCode) {
+            sender.addChatMessage(new ChatComponentText(EnumChatFormatting.RED + "Não foi possível obter resposta do fórum. Verifique sua conexão e tente novamente."));
          }
       },
       FAILED {
@@ -281,6 +293,8 @@ public final class ForumApiService {
             return RESTRICTED;
          case "expired":
             return EXPIRED;
+         case "invalid":
+            return INVALID;
          case "notfound":
             return NOT_FOUND;
          case "outdated":
@@ -291,6 +305,8 @@ public final class ForumApiService {
             return REJECTED;
          case "failed":
             return FAILED;
+         case "noresponse":
+            return NO_RESPONSE;
          case "server":
             return SERVER;
          default:
