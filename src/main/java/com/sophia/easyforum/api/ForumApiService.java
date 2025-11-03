@@ -119,7 +119,7 @@ public final class ForumApiService {
    }
 
    private static String readResponse(HttpURLConnection connection, int statusCode) throws Exception {
-      InputStream inputStream = (statusCode >= 201 && statusCode < 300) ? connection.getInputStream() : connection.getErrorStream();
+      InputStream inputStream = (statusCode >= 200 && statusCode < 300) ? connection.getInputStream() : connection.getErrorStream();
 
       return readInputStream(inputStream);
    }
